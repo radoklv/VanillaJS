@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="todo-wrapper">
+        <div class="todo-head">
+            <h1>Todo List</h1>
+
+            <form class="search">
+                <div class="input-field">
+                    <input type="text" placeholder="Search Todos" />
+                </div>
+            </form>
+        </div>
+
+        <div class="todo-body">
+            <ul class="todos">
+                <li class="todo">
+                    <p>first todo</p>
+                    <i class="far fa-trash-alt delete"></i>
+                </li>
+
+                <li class="todo">
+                    <p>second todo</p>
+                    <i class="far fa-trash-alt delete"></i>
+                </li>
+
+                <li class="todo">
+                    <p>third todo</p>
+                    <i class="far fa-trash-alt delete"></i>
+                </li>
+            </ul>
+        </div>
+
+        <div class="todo-foot">
+            <form class='add'>
+                <div class="input-field">
+                    <label for="addTodo">Add Todo</label>
+                    <input type="text" name="addInput" placeholder="Add Todo" />
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>
