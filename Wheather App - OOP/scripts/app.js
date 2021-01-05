@@ -1,16 +1,15 @@
+//Quering the DOM
 const cityForm = document.querySelector("form");
 const card = document.querySelector(".card");
 const details = document.querySelector(".details");
 const icon = document.querySelector(".icon");
 const time = document.querySelector(".time");
 
-const updateCity = async (city) => {
-  const cityDets = await getCity(city);
-  const weather = await getWeather(cityDets.Key);
+//Init Forecars Instance
+const forecast = new Forecast();
 
-  return { cityDets, weather };
-};
 
+//Uodate UI function
 const updateUi = (data) => {
   const cityDets = data.cityDets;
   const weather = data.weather;
@@ -38,13 +37,14 @@ const updateUi = (data) => {
   }
 };
 
+
+//Form submit event
 cityForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
   const city = cityForm.city.value.trim();
 
-
-  updateCity(city)
+  forecast.updateCity(city)
     .then((res) => {
       updateUi(res);
     })
@@ -55,10 +55,12 @@ cityForm.addEventListener("submit", (e) => {
     localStorage.setItem("city", city);
 });
 
+
+//Fires this local storage check every time 
 if (localStorage.getItem("city")) {
   const city = localStorage.getItem("city");
 
-  updateCity(city)
+  forecast.updateCity(city)
     .then((res) => {
       updateUi(res);
     })
