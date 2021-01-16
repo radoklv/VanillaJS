@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="todo-wrapper">
+        <div class="todo-head">
+            <h1>Firebase Todo List</h1>
+
+            <div class="input-field">
+                <input type="text" id='search' placeholder="Search Todos" />
+            </div>            
+        </div>
+
+        <div class="todo-body">
+            <ul class="todos">
+            </ul>
+        </div>
+
+        <div class="todo-foot">
+            <form class='add'>
+                <div class="input-field">
+                    <label for="addTodo">Add Todo</label>
+                    <input type="text" name="addInput" placeholder="Add Todo" />
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-firestore.js"></script>
+
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyBZaY0MmGvJguxFCxEbGwzx_RHEWt9xXRk",
+    authDomain: "todolist-a5679.firebaseapp.com",
+    projectId: "todolist-a5679",
+    storageBucket: "todolist-a5679.appspot.com",
+    messagingSenderId: "954026867199",
+    appId: "1:954026867199:web:5c0936f0730706bd4a4fca"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  const db = firebase.firestore();
+</script>
+
+<script src="scripts/forecast.js"></script>
+<script src="scripts/ui.js"></script>
+<script src="scripts/app.js"></script>
+</html>
