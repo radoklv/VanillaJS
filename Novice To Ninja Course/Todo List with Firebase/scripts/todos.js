@@ -1,4 +1,4 @@
-class Forecast{
+class Todos{
     constructor(){
         this.conn = db.collection('todos')
     }

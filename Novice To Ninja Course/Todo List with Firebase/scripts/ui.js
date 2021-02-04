@@ -26,7 +26,7 @@ class UI {
   }
 
   removeTodo(id) {
-    const list = todos.querySelectorAll(".todo");
+    const list = this.todos.querySelectorAll(".todo");
 
     list.forEach((todo) => {
       const todoId = todo.getAttribute("data-id");
